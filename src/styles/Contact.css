@@ -1,0 +1,135 @@
+.contact {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-info {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all var(--transition-medium);
+}
+
+.contact-info.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--color-blue);
+}
+
+.info-text h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.info-text p {
+  color: var(--color-grey);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-light-grey);
+  color: var(--color-dark-grey);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  transform: translateY(-5px);
+}
+
+.contact-form {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all var(--transition-medium);
+}
+
+.contact-form.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--color-grey);
+  border-radius: var(--border-radius-small);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-blue);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--border-radius-small);
+  font-weight: 500;
+}
+
+.form-message.success {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #27ae60;
+}
+
+.form-message.error {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

@@ -36,37 +36,40 @@ const Services = () => {
 
   const services = [
     {
+      icon: "🖨️",
+      title: "DTF Printing",
+      description:
+        "High-quality Direct-to-Film printing for vibrant, durable designs on various fabrics and materials.",
+    },
+    {
+      icon: "🧵",
+      title: "Embroidery",
+      description:
+        "Custom embroidery services for apparel, accessories, and promotional items with precision and attention to detail.",
+    },
+    {
+      icon: "🎁",
+      title: "Souvenirs",
+      description:
+        "Memorable custom souvenirs and promotional items that make a lasting impression for your brand or event.",
+    },
+    {
+      icon: "🎪",
+      title: "Event Branding",
+      description:
+        "Comprehensive branding solutions for events, from concept to execution, creating cohesive visual experiences.",
+    },
+    {
       icon: "✏️",
       title: "Brand Identity",
       description:
         "We create cohesive visual identities that tell your brand story through logos, color palettes, typography, and more.",
     },
     {
-      icon: "🖥️",
-      title: "Web Design",
-      description:
-        "Custom websites that are not only visually stunning but also functional, responsive, and optimized for conversion.",
-    },
-    {
       icon: "📱",
       title: "Social Media",
       description:
         "Eye-catching social media assets that build brand recognition and engage your audience across platforms.",
-    },
-    {
-      icon: "📸",
-      title: "Photography",
-      description: "Professional product and brand photography that showcases your offerings in their best light.",
-    },
-    {
-      icon: "🎬",
-      title: "Video Production",
-      description: "Compelling video content that tells your story and connects with viewers on an emotional level.",
-    },
-    {
-      icon: "📊",
-      title: "Marketing Collateral",
-      description: "From business cards to brochures, we design print materials that make a lasting impression.",
     },
   ]
 

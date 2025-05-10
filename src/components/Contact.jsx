@@ -1,24 +1,10 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import "../styles/Contact.css"
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    success: false,
-    message: "",
-  })
-
   const sectionRef = useRef(null)
-  const formRef = useRef(null)
   const infoRef = useRef(null)
 
   useEffect(() => {
@@ -34,51 +20,13 @@ const Contact = () => {
     )
 
     if (sectionRef.current) observer.observe(sectionRef.current)
-    if (formRef.current) observer.observe(formRef.current)
     if (infoRef.current) observer.observe(infoRef.current)
 
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current)
-      if (formRef.current) observer.unobserve(formRef.current)
       if (infoRef.current) observer.unobserve(infoRef.current)
     }
   }, [])
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    // Simulate form submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: "Thank you for your message! We'll get back to you soon.",
-    })
-
-    // Reset form after successful submission
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-
-    // Reset status after 5 seconds
-    setTimeout(() => {
-      setFormStatus({
-        submitted: false,
-        success: false,
-        message: "",
-      })
-    }, 5000)
-  }
 
   return (
     <section id="contact" className="contact" ref={sectionRef}>
@@ -90,7 +38,7 @@ const Contact = () => {
           <div className="section-line"></div>
         </div>
 
-        <div className="contact-content">
+        <div className="contact-content-centered">
           <div className="contact-info" ref={infoRef}>
             <div className="info-item">
               <div className="info-icon">📍</div>
@@ -116,76 +64,23 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="social-links">
-              <a href="#" className="social-link">
-                FB
-              </a>
-              <a href="#" className="social-link">
-                IG
-              </a>
-              <a href="#" className="social-link">
-                TW
-              </a>
-              <a href="#" className="social-link">
-                LI
-              </a>
+            <div className="social-links-container">
+              <h3>Connect With Us</h3>
+              <div className="social-links">
+                <a href="#" className="social-link whatsapp">
+                  <span className="social-icon">📱</span>
+                  <span className="social-name">WhatsApp</span>
+                </a>
+                <a href="#" className="social-link instagram">
+                  <span className="social-icon">📸</span>
+                  <span className="social-name">Instagram</span>
+                </a>
+                <a href="#" className="social-link tiktok">
+                  <span className="social-icon">🎵</span>
+                  <span className="social-name">TikTok</span>
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div className="contact-form" ref={formRef}>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" className="btn btn-primary">
-                Send Message
-                <span className="btn-arrow">→</span>
-              </button>
-
-              {formStatus.submitted && (
-                <div className={`form-message ${formStatus.success ? "success" : "error"}`}>{formStatus.message}</div>
-              )}
-            </form>
           </div>
         </div>
       </div>

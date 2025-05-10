@@ -39,19 +39,19 @@ const Footer = () => {
               <h4>Services</h4>
               <ul>
                 <li>
+                  <a href="#services">DTF Printing</a>
+                </li>
+                <li>
+                  <a href="#services">Embroidery</a>
+                </li>
+                <li>
+                  <a href="#services">Souvenirs</a>
+                </li>
+                <li>
+                  <a href="#services">Event Branding</a>
+                </li>
+                <li>
                   <a href="#services">Brand Identity</a>
-                </li>
-                <li>
-                  <a href="#services">Web Design</a>
-                </li>
-                <li>
-                  <a href="#services">Social Media</a>
-                </li>
-                <li>
-                  <a href="#services">Photography</a>
-                </li>
-                <li>
-                  <a href="#services">Video Production</a>
                 </li>
               </ul>
             </div>
@@ -72,17 +72,14 @@ const Footer = () => {
           <div className="copyright">&copy; {currentYear} Think Kre8tiv Media. All rights reserved.</div>
 
           <div className="social-links">
-            <a href="#" className="social-link">
-              FB
+            <a href="#" className="social-link" title="WhatsApp">
+              WA
             </a>
-            <a href="#" className="social-link">
+            <a href="#" className="social-link" title="Instagram">
               IG
             </a>
-            <a href="#" className="social-link">
-              TW
-            </a>
-            <a href="#" className="social-link">
-              LI
+            <a href="#" className="social-link" title="TikTok">
+              TT
             </a>
           </div>
         </div>

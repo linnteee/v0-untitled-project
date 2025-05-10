@@ -44,7 +44,7 @@ const Contact = () => {
               <div className="info-icon">📍</div>
               <div className="info-text">
                 <h3>Our Location</h3>
-                <p>123 Creative Avenue, Design District, NY 10001</p>
+                <p>6 Lokko Road, Osu, Accra, Ghana</p>
               </div>
             </div>
 
@@ -52,7 +52,9 @@ const Contact = () => {
               <div className="info-icon">📧</div>
               <div className="info-text">
                 <h3>Email Us</h3>
-                <p>hello@thinkkre8tiv.com</p>
+                <p>
+                  <a href="mailto:kre8tiv@thinkkre8tiv.com">kre8tiv@thinkkre8tiv.com</a>
+                </p>
               </div>
             </div>
 
@@ -60,22 +62,37 @@ const Contact = () => {
               <div className="info-icon">📱</div>
               <div className="info-text">
                 <h3>Call Us</h3>
-                <p>+1 (555) 123-4567</p>
+                <p>+233 244 681 391</p>
               </div>
             </div>
 
             <div className="social-links-container">
               <h3>Connect With Us</h3>
               <div className="social-links">
-                <a href="#" className="social-link whatsapp">
+                <a
+                  href="https://wa.me/233244681391"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link whatsapp"
+                >
                   <span className="social-icon">📱</span>
                   <span className="social-name">WhatsApp</span>
                 </a>
-                <a href="#" className="social-link instagram">
+                <a
+                  href="https://instagram.com/thinkkre8tiv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link instagram"
+                >
                   <span className="social-icon">📸</span>
                   <span className="social-name">Instagram</span>
                 </a>
-                <a href="#" className="social-link tiktok">
+                <a
+                  href="https://tiktok.com/@thinkkre8tivmedia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link tiktok"
+                >
                   <span className="social-icon">🎵</span>
                   <span className="social-name">TikTok</span>
                 </a>

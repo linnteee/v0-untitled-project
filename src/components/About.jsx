@@ -6,7 +6,8 @@ import "../styles/About.css"
 const About = () => {
   const sectionRef = useRef(null)
   const textRef = useRef(null)
-  const statsRef = useRef(null)
+  const missionRef = useRef(null)
+  const visionRef = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,12 +23,14 @@ const About = () => {
 
     if (sectionRef.current) observer.observe(sectionRef.current)
     if (textRef.current) observer.observe(textRef.current)
-    if (statsRef.current) observer.observe(statsRef.current)
+    if (missionRef.current) observer.observe(missionRef.current)
+    if (visionRef.current) observer.observe(visionRef.current)
 
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current)
       if (textRef.current) observer.unobserve(textRef.current)
-      if (statsRef.current) observer.unobserve(statsRef.current)
+      if (missionRef.current) observer.unobserve(missionRef.current)
+      if (visionRef.current) observer.unobserve(visionRef.current)
     }
   }, [])
 
@@ -43,37 +46,60 @@ const About = () => {
 
         <div className="about-content">
           <div className="about-text" ref={textRef}>
-            <h3>
-              We're not just designers, we're <span className="highlight">storytellers</span>
-            </h3>
             <p>
-              At Think Kre8tiv Media, we believe that great branding tells a story. We're a team of passionate creatives
-              dedicated to crafting unique visual identities that resonate with your audience and elevate your brand.
+              Think Kre8tiv Media is a dynamic and innovative branding and print solutions company dedicated to bringing
+              your ideas to life with creativity, precision, and speed. Founded by Nii Armah Aryeetey, Think Kre8tiv
+              Media has earned a reputation for excellence in general printing, branding, souvenirs, and digitized
+              embroidery.
             </p>
             <p>
-              Founded in 2015, we've helped over 200 businesses transform their visual presence through thoughtful
-              design and strategic branding. Our approach combines creativity with purpose, ensuring every element we
-              create serves your brand's goals.
+              We pride ourselves on our fast turnaround times, attention to detail, and commitment to delivering
+              high-quality results that exceed expectations. Our production facility is equipped with state-of-the-art
+              machinery including a 10-head embroidery machine, UV printer, laser cutter, digital (DTF) and large format
+              printers, allowing us to handle both small and large-scale projects with ease.
+            </p>
+            <p>
+              Over the years, we've worked with a diverse range of clients such as Golden Star, Jibu Water, Zenith Bank,
+              Omni Bank, Zola Energy, USAID, SEND Ghana, and Water Aid, consistently delivering projects that align with
+              their brand vision.
+            </p>
+            <p>
+              At Think Kre8tiv Media, we don't just print — we bring your brand to life. Whether it's branded
+              merchandise, corporate gifts, promotional items, or customized apparel, we are your one-stop creative
+              partner for impactful brand representation.
             </p>
           </div>
 
-          <div className="about-stats" ref={statsRef}>
-            <div className="stat">
-              <div className="stat-number">8+</div>
-              <div className="stat-label">Years Experience</div>
+          <div className="about-values">
+            <div className="value-card mission" ref={missionRef}>
+              <h3>Our Mission</h3>
+              <p>
+                To deliver innovative, high-quality branding and print solutions that empower businesses and individuals
+                to stand out, communicate effectively, and grow their brand presence with confidence.
+              </p>
             </div>
-            <div className="stat">
-              <div className="stat-number">200+</div>
-              <div className="stat-label">Happy Clients</div>
+
+            <div className="value-card vision" ref={visionRef}>
+              <h3>Our Vision</h3>
+              <p>
+                To be the leading creative solutions provider in Africa — known for excellence, innovation, and
+                reliability in branding and printing services that transform ideas into powerful visual experiences.
+              </p>
             </div>
-            <div className="stat">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Projects Completed</div>
-            </div>
-            <div className="stat">
-              <div className="stat-number">15</div>
-              <div className="stat-label">Design Awards</div>
-            </div>
+          </div>
+        </div>
+
+        <div className="clients-section">
+          <h3>Our Clients</h3>
+          <div className="clients-list">
+            <span className="client-tag">Golden Star</span>
+            <span className="client-tag">Jibu Water</span>
+            <span className="client-tag">Zenith Bank</span>
+            <span className="client-tag">Omni Bank</span>
+            <span className="client-tag">Zola Energy</span>
+            <span className="client-tag">USAID</span>
+            <span className="client-tag">SEND Ghana</span>
+            <span className="client-tag">Water Aid</span>
           </div>
         </div>
       </div>

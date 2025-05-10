@@ -59,10 +59,12 @@ const Footer = () => {
             <div className="footer-nav-column">
               <h4>Contact</h4>
               <ul>
-                <li>123 Creative Avenue</li>
-                <li>Design District, NY 10001</li>
-                <li>hello@thinkkre8tiv.com</li>
-                <li>+1 (555) 123-4567</li>
+                <li>6 Lokko Road, Osu</li>
+                <li>Accra, Ghana</li>
+                <li>
+                  <a href="mailto:kre8tiv@thinkkre8tiv.com">kre8tiv@thinkkre8tiv.com</a>
+                </li>
+                <li>+233 244 681 391</li>
               </ul>
             </div>
           </div>
@@ -72,13 +74,31 @@ const Footer = () => {
           <div className="copyright">&copy; {currentYear} Think Kre8tiv Media. All rights reserved.</div>
 
           <div className="social-links">
-            <a href="#" className="social-link" title="WhatsApp">
+            <a
+              href="https://wa.me/233244681391"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              title="WhatsApp"
+            >
               WA
             </a>
-            <a href="#" className="social-link" title="Instagram">
+            <a
+              href="https://instagram.com/thinkkre8tiv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              title="Instagram"
+            >
               IG
             </a>
-            <a href="#" className="social-link" title="TikTok">
+            <a
+              href="https://tiktok.com/@thinkkre8tivmedia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              title="TikTok"
+            >
               TT
             </a>
           </div>

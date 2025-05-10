@@ -39,19 +39,19 @@ const Footer = () => {
               <h4>Services</h4>
               <ul>
                 <li>
-                  <a href="#services">DTF Printing</a>
+                  <a href="#services">Embroidery</a>
                 </li>
                 <li>
-                  <a href="#services">Embroidery</a>
+                  <a href="#services">Printing</a>
                 </li>
                 <li>
                   <a href="#services">Souvenirs</a>
                 </li>
                 <li>
-                  <a href="#services">Event Branding</a>
+                  <a href="#services">Branding</a>
                 </li>
                 <li>
-                  <a href="#services">Brand Identity</a>
+                  <a href="#services">DTF Printing</a>
                 </li>
               </ul>
             </div>

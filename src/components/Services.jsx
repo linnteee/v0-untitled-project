@@ -36,16 +36,16 @@ const Services = () => {
 
   const services = [
     {
-      icon: "🖨️",
-      title: "DTF Printing",
-      description:
-        "High-quality Direct-to-Film printing for vibrant, durable designs on various fabrics and materials.",
-    },
-    {
       icon: "🧵",
       title: "Embroidery",
       description:
         "Custom embroidery services for apparel, accessories, and promotional items with precision and attention to detail.",
+    },
+    {
+      icon: "🖨️",
+      title: "Printing",
+      description:
+        "High-quality printing services for all your business and promotional needs, from business cards to banners.",
     },
     {
       icon: "🎁",
@@ -55,21 +55,15 @@ const Services = () => {
     },
     {
       icon: "🎪",
-      title: "Event Branding",
+      title: "Branding",
       description:
-        "Comprehensive branding solutions for events, from concept to execution, creating cohesive visual experiences.",
+        "Comprehensive branding solutions from concept to execution, creating cohesive visual identities for your business.",
     },
     {
-      icon: "✏️",
-      title: "Brand Identity",
+      icon: "👕",
+      title: "DTF Printing",
       description:
-        "We create cohesive visual identities that tell your brand story through logos, color palettes, typography, and more.",
-    },
-    {
-      icon: "📱",
-      title: "Social Media",
-      description:
-        "Eye-catching social media assets that build brand recognition and engage your audience across platforms.",
+        "Direct-to-Film printing for vibrant, durable designs on various fabrics and materials with exceptional detail.",
     },
   ]
 

@@ -52,11 +52,15 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text" ref={textRef}>
           <h1>
-            <span className="line">We Create</span>
-            <span className="line">Brands That</span>
-            <span className="line highlight">Stand Out</span>
+            <span className="line">Think</span>
+            <span className="line highlight">Kre8tiv</span>
+            <span className="line">Media</span>
           </h1>
-          <p>Transforming ideas into visual masterpieces that captivate and inspire.</p>
+          <p>
+            At Think Kre8tiv Media, we specialize in creative branding, general printing, souvenirs, and digitized
+            embroidery. With cutting-edge equipment and a passion for excellence, we deliver high-quality,
+            fast-turnaround solutions that bring your brand to life.
+          </p>
         </div>
 
         <div className="hero-cta" ref={ctaRef}>

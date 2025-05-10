@@ -10,34 +10,6 @@
   padding: 0 2rem;
 }
 
-.portfolio-filter {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.portfolio-filter button {
-  padding: 0.5rem 1.5rem;
-  border-radius: var(--border-radius-small);
-  font-weight: 500;
-  background-color: var(--color-white);
-  color: var(--color-dark-grey);
-  transition: all var(--transition-fast);
-  box-shadow: var(--shadow-small);
-}
-
-.portfolio-filter button:hover {
-  background-color: var(--color-blue);
-  color: var(--color-white);
-}
-
-.portfolio-filter button.active {
-  background-color: var(--color-blue);
-  color: var(--color-white);
-}
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -45,6 +17,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all var(--transition-medium);
+  margin-top: 3rem;
 }
 
 .portfolio-grid.in-view {
@@ -124,26 +97,6 @@
 
 .portfolio-item:hover .portfolio-overlay p {
   transform: translateY(0);
-}
-
-.btn-view {
-  padding: 0.5rem 1.5rem;
-  background-color: var(--color-blue);
-  color: var(--color-white);
-  border-radius: var(--border-radius-small);
-  font-weight: 500;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all var(--transition-medium);
-}
-
-.portfolio-item:hover .btn-view {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.btn-view:hover {
-  background-color: var(--color-dark-blue);
 }
 
 @media (max-width: 768px) {

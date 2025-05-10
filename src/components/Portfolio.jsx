@@ -1,15 +1,13 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import "../styles/Portfolio.css"
 
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState("all")
-  const [projects, setProjects] = useState([])
   const sectionRef = useRef(null)
   const gridRef = useRef(null)
 
-  const allProjects = [
+  const projects = [
     {
       id: 1,
       title: "Lunar Cosmetics",
@@ -55,8 +53,6 @@ const Portfolio = () => {
   ]
 
   useEffect(() => {
-    setProjects(allProjects)
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -77,21 +73,6 @@ const Portfolio = () => {
     }
   }, [])
 
-  useEffect(() => {
-    if (activeCategory === "all") {
-      setProjects(allProjects)
-    } else {
-      setProjects(allProjects.filter((project) => project.category === activeCategory))
-    }
-
-    if (gridRef.current) {
-      gridRef.current.classList.remove("in-view")
-      setTimeout(() => {
-        gridRef.current.classList.add("in-view")
-      }, 50)
-    }
-  }, [activeCategory])
-
   return (
     <section id="portfolio" className="portfolio" ref={sectionRef}>
       <div className="portfolio-container">
@@ -102,24 +83,6 @@ const Portfolio = () => {
           <div className="section-line"></div>
         </div>
 
-        <div className="portfolio-filter">
-          <button className={activeCategory === "all" ? "active" : ""} onClick={() => setActiveCategory("all")}>
-            All
-          </button>
-          <button
-            className={activeCategory === "branding" ? "active" : ""}
-            onClick={() => setActiveCategory("branding")}
-          >
-            Branding
-          </button>
-          <button className={activeCategory === "web" ? "active" : ""} onClick={() => setActiveCategory("web")}>
-            Web Design
-          </button>
-          <button className={activeCategory === "print" ? "active" : ""} onClick={() => setActiveCategory("print")}>
-            Print
-          </button>
-        </div>
-
         <div className="portfolio-grid" ref={gridRef}>
           {projects.map((project) => (
             <div className="portfolio-item" key={project.id}>
@@ -128,7 +91,6 @@ const Portfolio = () => {
                 <div className="portfolio-overlay">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <button className="btn-view">View Project</button>
                 </div>
               </div>
             </div>
